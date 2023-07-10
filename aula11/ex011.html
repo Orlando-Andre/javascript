@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUNDO</title>
+
+    <style>
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body > p#txt > strong {
+            color: red;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Verifica Nacionalidade</h1>
+
+    Digite um país: <input type="text" name="p" id="p">
+
+    <input type="button" value="OK" onclick= "calcular()">
+
+    <p id = 'txt'></p>
+
+    <p id = 'res'></p>
+     
+    <script>
+        function calcular() {
+
+            var txtP = window.document.getElementById('p').value
+            var txt = window.document.getElementById('txt')
+            var res = window.document.getElementById('res')
+            
+
+            txt.innerHTML = `Vivendo no <strong>${txtP}</strong>`
+
+            if(txtP == 'Brasil'){
+                res.innerHTML = `Você é brasileiro(a)!` 
+            }else{
+                res.innerHTML = `Você é estrangeiro(a)!`
+            }
+
+        }
+    </script>
+
+    
+</body>
+</html>
